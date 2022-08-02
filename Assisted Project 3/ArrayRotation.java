@@ -1,0 +1,28 @@
+package Array;
+
+public class ArrayRotation {
+
+
+	public static void main(String[] args) {
+		int n = 5;
+		int array[] = { 1, 8, 7, 89, 50, 61, 73 };
+		System.out.println("Array before Right shift");
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+		for(int i=0; i<n;i++) {
+			int j, l;
+			l=array[array.length-1];
+			
+			for(j=array.length-1; j>0; j--) {
+				array[j]=array[j-1];
+			}
+			array[0]=l;
+		}
+		System.out.println();
+		System.out.println("Array after Right shift");
+		for (int i=0; i <array.length; i++) {
+			System.out.print(array[i] +" ");
+		}
+	}	
+}
